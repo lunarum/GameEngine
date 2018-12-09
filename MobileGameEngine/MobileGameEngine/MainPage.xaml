@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:local="clr-namespace:MobileGameEngine"
+             x:Class="MobileGameEngine.MainPage"
+             Title="Game Engine">
+    <Grid VerticalOptions="FillAndExpand">
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!" 
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start" />
+            <skia:SKCanvasView PaintSurface="OnCanvasViewPaintSurface"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <skia:SKCanvasView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnCanvasViewTapped" />
+                </skia:SKCanvasView.GestureRecognizers>
+            </skia:SKCanvasView>
+        </StackLayout>
+    </Grid>
+</ContentPage>
